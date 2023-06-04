@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- Fontawesome & Box Icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+      * {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+      }
+
+      body {
+        background-color: #efeff8 !important;
+      }
+
+      /* Main Page */
+      .main-pages {
+        position: relative;
+        margin-left: 240px;
+        margin-right: 290px;
+        padding: 8px 8px;
+        transition: 0.3s;
+        z-index: 1;
+      }
+
+      .upgrades i {
+        color: #5e81f4;
+        background-color: #fff;
+        padding: 6px;
+        border-radius: 10px;
+      }
+
+      .isi {
+        margin-left: 15px;
+      }
+
+      .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3),
+      .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+        border-top-right-radius: 0.25rem !important;
+        border-bottom-right-radius: 0.25rem !important;
+      }
+      .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        margin-left: 0 !important;
+        border-top-left-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+      }
+
+      .footer-bottom {
+        position: absolute;
+        margin-left: 240px;
+        margin-right: 290px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+      }
+      /* Akhir Main Page */
+
+      /* Sidebar Kiri */
+      .slider {
+        width: 240px;
+        height: 100vh;
+        position: fixed;
+        background: #f9f9fc;
+        transition: 0.3s;
+        z-index: 9;
+      }
+
+      .slider-head {
+        padding: 24px 0 14px 0;
+      }
+
+      .slider-head span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #5e81f4;
+      }
+      .slider-head .btn1 {
+        font-size: 13px;
+        display: inline-block;
+        color: #fff;
+        padding: 10px 28px;
+        background: #5e81f4;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .slider-head .btn1:hover {
+        background: rgba(94, 129, 244, 0.5);
+      }
+
+      .slider-body {
+        height: 100%;
+        font-size: 14px;
+      }
+
+      .slider-body .nav-link {
+        font-size: 15px;
+        color: #bbbec5;
+        transition: all 0.3s;
+        margin: 0 0 0 30px;
+        padding: 8px 16px;
+        display: flex;
+      }
+      /*.slider-body .nav-link.highlight.active {*/
+      /*  color: #000;*/
+      /*  border-right: 3px solid #5e81f4;*/
+      /*}*/
+      /*.slider-body .nav-link.highlight.active i {*/
+      /*  color: #5e81f4;*/
+      /*}*/
+
+      .slider-body .nav-link:hover {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .sc-left {
+        padding: 8px 16px;
+        margin: 10px 0 0 30px;
+        width: 150px;
+      }
+      .sc-left img {
+        background-color: #5e81f4;
+        padding: 10px;
+      }
+      .sc-left .btn2 {
+        font-size: 13px;
+        display: inline-block;
+        color: #fff;
+        padding: 10px 28px;
+        background: #5e81f4;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+
+      .nav-link.logout {
+        padding-bottom: 16px;
+        position: absolute;
+        bottom: 0;
+      }
+      /* Akhir Sidebar Kiri */
+
+      /* Sidebar Kanan */
+      .slider-right {
+        color: #1e3953;
+        right: 0;
+        width: 290px;
+        height: 100vh;
+        position: fixed;
+        background: #f8f8fc;
+        transition: 0.3s;
+        z-index: 9;
+      }
+
+      .slider-head-right {
+        padding: 20px 0 10px 0;
+      }
+      .slider-head-right a.profil {
+        color: #1e3953;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .slider-body-right {
+        height: 100%;
+        font-size: 14px;
+      }
+      .slider-body-right h5 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .slider-body-right h6 {
+        font-size: 15px;
+      }
+      /* Akhir Sidebar Kanan */
+
+      .slider-background {
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        display: none;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 0.2s;
+        z-index: 8;
+      }
+
+      @media (max-width: 992px) {
+        .slider {
+          margin-left: -280px;
+        }
+        .slider-right {
+          margin-right: -310px;
+        }
+
+        .slider.active {
+          margin-left: 0;
+        }
+
+        .slider-background.active {
+          display: block;
+        }
+
+        .main-pages {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    </style>
+
+    <title>MDR | Upgrade</title>
+  </head>
+  <body>
+    <div class="Nothing">
+      <!-- Sidebar -->
+      <!-- Kiri  -->
+      <div id="sliders" class="slider">
+        <div class="slider-head">
+          <div class="d-block p-3 text-center">
+            <a href="index.html" class="btn btn-default" type="button">
+              <i class="fas fa-dice-d20 fs-5" aria-hidden="true" style="color: #fff; background-color: #5e81f4; padding: 10px 12px; border-radius: 8px"></i>
+              <span class="ms-2">MDR</span>
+            </a>
+            <a class="btn1 mt-4" href="courses">Join a courses</a>
+          </div>
+        </div>
+        <div class="slider-body ps-1">
+          <nav class="nav flex-column">
+            <a class="nav-link mt-3" href="dashboard"><i class="bx bx-layout fs-5 me-2"></i> Dashboard</a>
+            <a class="nav-link highlight active my-2" href="courses"><i class="bx bx-category fs-5 me-2 align-text-top"></i> All Courses</a>
+            <a class="nav-link" href="friends"><i class="bx bx-user fs-5 me-2 align-text-top"></i> Friends</a>
+            <a class="nav-link my-2" href="chats"><i class="bx bx-message fs-5 me-2 align-text-top"></i> Chats</a>
+            <!--<hr class="soft bg-dark m-3" />-->
+            <div class="sc-left text-center">
+              <img class="rounded-circle" src="assets/csleft" width="90" alt="" />
+              <p class="my-3">Upgrade for more resources</p>
+              <a class="btn2" href="#">Upgrade</a>
+            </div>
+            <a class="nav-link logout" href="landingpage"><i class="bx bx-log-out fs-5 me-2"></i> LogOut</a>
+          </nav>
+        </div>
+      </div>
+      <!-- Akhir Sidebar Kiri -->
+
+      <!-- Kanan -->
+      <div id="sliders" class="slider-right">
+        <div class="slider-head-right">
+          <div class="d-block p-4">
+            <div class="d-flex align-items-center">
+              <img src="assets/photoprofile" style="border-radius: 18px" width="50px" height="50px" alt="" />
+              <div class="ms-3">
+                <a class="profil" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownprofile">Dihya Ramdhan <i class="bx bx-chevron-down fs-5 align-text-top"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownprofile">
+                  <li>
+                    <a class="dropdown-item" href="profile"><i class="bx bx-user-circle fs-5 me-1 align-text-top"></i> Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="dashboard"><i class="bx bx-tachometer fs-5 me-1 align-text-top"></i> Dashboard</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="setting"><i class="bx bx-cog fs-5 me-1 align-text-top"></i> Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="landingpage"><i class="bx bx-log-out-circle fs-5 me-1 align-text-top"></i> Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-body-right p-4">
+          <h5 class="m-0">Progress</h5>
+          <div class="d-flex mt-4">
+            <i class="bx bx-pencil fs-4 p-2 align-text-top rounded" style="background-color: #d0d9fa; color: #5e81f4"></i>
+            <div class="ms-3">
+              <h6 class="mb-2" style="padding-right: 50px">UI/UX Design</h6>
+              <div class="progress" style="height: 10px; background-color: #d0d9fa">
+                <div class="progress-bar rounded-pill" role="progressbar" style="width: 75%; background-color: #5e81f4" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex mt-4">
+            <i class="bx bx-camera fs-4 p-2 align-text-top rounded" style="background-color: #c4e7f8; color: #0cc3e7"></i>
+            <div class="ms-3">
+              <h6 class="mb-2" style="padding-right: 50px">Photography</h6>
+              <div class="progress" style="height: 10px; background-color: #c4e7f8">
+                <div class="progress-bar rounded-pill" role="progressbar" style="width: 30%; background-color: #0cc3e7" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex mt-4">
+            <i class="bx bx-pyramid fs-4 p-2 align-text-top rounded" style="background-color: #ffefd6; color: #ffae33"></i>
+            <div class="ms-3">
+              <h6 class="mb-2" style="padding-right: 71px">Animation</h6>
+              <div class="progress" style="height: 10px; background-color: #f1dae5">
+                <div class="progress-bar rounded-pill" role="progressbar" style="width: 60%; background-color: #ffae33" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <h5 class="mt-5">Upcoming Task</h5>
+          <div class="d-flex align-items-center mt-4">
+            <i class="bx bx-chat fs-4 px-2 py-2 rounded" style="background-color: #d0d9fa; color: #5e81f4"></i>
+            <div class="ms-3">
+              <h6 class="m-0">UI/UX - Discussion</h6>
+              <small class="text-muted">03 Nov 2021, Wednesday</small>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mt-4">
+            <i class="bx bx-cube-alt fs-4 px-2 py-2 rounded" style="background-color: #ffefd6; color: #ffae33"></i>
+            <div class="ms-3">
+              <h6 class="m-0">3D Animation</h6>
+              <small class="text-muted"> 04 Nov 2021, Thursday</small>
+            </div>
+          </div>
+          <div class="pt-5">
+            <a href="#">
+              <img src="assets/csright" style="border-radius: 20px" class="w-100" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Akhir Sidebar Kanan -->
+      <!-- Akhir Sidebar-->
+
+      <!-- Main Page -->
+      <div class="main-pages">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <h3 class="fw-bold pt-4 pb-1">Why you should upgrade to MDR Pro?</h3>
+              <p class="text-muted mb-4">By this upgrade you will get all features from Basic, plus:</p>
+              <div class="upgrades d-flex align-items-center">
+                <i class="bx bx-edit fs-2 shadow-sm"></i>
+                <div class="isi">
+                  <h6 class="m-0">Lorem ipsum.</h6>
+                  <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</small>
+                </div>
+              </div>
+              <div class="upgrades d-flex align-items-center my-4">
+                <i class="bx bx-user-plus fs-2 shadow-sm"></i>
+                <div class="isi">
+                  <h6 class="m-0">Lorem ipsum.</h6>
+                  <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</small>
+                </div>
+              </div>
+              <div class="upgrades d-flex align-items-center">
+                <i class="bx bx-bar-chart-alt fs-2 shadow-sm"></i>
+                <div class="isi">
+                  <h6 class="m-0">Lorem ipsum.</h6>
+                  <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</small>
+                </div>
+              </div>
+              <div class="upgrades d-flex align-items-center my-4">
+                <i class="bx bx-shield-alt-2 fs-2 shadow-sm"></i>
+                <div class="isi">
+                  <h6 class="m-0">Lorem ipsum.</h6>
+                  <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</small>
+                </div>
+              </div>
+              <div class="upgrades d-flex align-items-center">
+                <i class="bx bx-folder fs-2 shadow-sm"></i>
+                <div class="isi">
+                  <h6 class="m-0">Lorem ipsum.</h6>
+                  <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</small>
+                </div>
+              </div>
+              <div class="upgrades d-flex align-items-center my-4">
+                <i class="bx bx-pie-chart fs-2 shadow-sm"></i>
+                <div class="isi">
+                  <h6 class="m-0">Lorem ipsum.</h6>
+                  <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</small>
+                </div>
+              </div>
+              <div class="upgrades d-flex align-items-center">
+                <i class="bx bx-palette fs-2 shadow-sm"></i>
+                <div class="isi">
+                  <h6 class="m-0">Lorem ipsum.</h6>
+                  <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mt-4">
+              <div class="bg-white shadow-sm py-5" style="border-radius: 10px">
+                <div class="text-center">
+                  <h4 class="m-0 fw-bold">Become a Pro now</h4>
+                  <p class="text-muted">Choose your preferred PRO access plan</p>
+                </div>
+                <div class="mx-5 p-3" style="background-color: #f4f6f6; border-radius: 10px">
+                  <h6 class="text-muted">Pro plan</h6>
+                  <p class="m-0 fs-4">$259<span class="fs-6 text-muted">/mo</span></p>
+                  <small>lorem ipsum dolor sit amet.</small>
+                </div>
+                <div class="mx-5 mt-3">
+                  <p class="m-0 float-end text-black">$11,03</p>
+                  <h6 class="m-0">Prorated cost for upgrade</h6>
+                  <small class="text-muted">This is the amount you'll be charged.</small>
+                </div>
+                <hr class="mx-4" />
+                <div class="mx-5">
+                  <h6 class="m-0">Billing Information</h6>
+                  <form action="#">
+                    <input type="text" class="form-control my-3" placeholder="Credit card number" />
+                    <div class="input-group">
+                      <input type="text" class="form-control me-3" placeholder="Security code" />
+                      <input type="text" class="form-control" placeholder="Expiration date" />
+                    </div>
+                    <div class="d-grid mt-3">
+                      <a class="btn btn-primary">Upgrade now</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom py-3">
+        <div class="container">
+          <div class="row pt-3">
+            <div class="d-flex justify-content-center">
+              <p>© 2021 Reserved by Muhammad Dihya Ramdhan. | Powered by <a href="https://www.gamelab.id/" target="_blank">Gamelab</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir Main Page -->
+
+    <div class="slider-background" id="sliders-background"></div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+
+    <!-- Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- main js -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

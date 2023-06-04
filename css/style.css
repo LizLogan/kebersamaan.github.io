@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: #efeff8;
+}
+
+.chartbox {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+}
+
+/* Crud */
+.crud {
+  background-color: #fff;
+  border-radius: 20px;
+  height: 100%;
+}
+.crud td {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #000;
+}
+.form form,
+#edit-box form {
+  display: flex;
+  align-items: center;
+}
+
+button.crud-btn {
+  background: none;
+  border: none;
+  color: #000;
+  padding: 0;
+  height: 20px;
+  outline: none;
+}
+.form form button {
+  background: #2597d0;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.form form button:hover {
+  background: #2597d0a4;
+}
+
+.crud input {
+  width: 100%;
+  padding: 5px 10px;
+  border: 2px solid #5e81f47a;
+  border-radius: 3px;
+  background: transparent;
+  color: #000;
+  outline: none;
+}
+
+#edit-box {
+  display: none;
+  margin-top: 10px;
+}
+/* Akhir Crud */
+
+/* Main Page */
+.main-pages {
+  position: relative;
+  margin-left: 240px;
+  margin-right: 290px;
+  padding: 8px 8px;
+  transition: 0.3s;
+  z-index: 1;
+}
+.main-pages .input {
+  border: none;
+  outline: none;
+}
+.main-pages a.notif {
+  color: #5e81f4;
+  text-decoration: none;
+}
+
+.main-pages .card1 {
+  background: url('../img/Untitled-2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+.main-pages .card2 {
+  background: url('../img/Untitled-3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+.main-pages .card3 {
+  background: url('../img/Untitled-5.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+.main-pages .card4 {
+  background: url('../img/Untitled-1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.tr {
+  transition: 0.3s;
+}
+.tr:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  cursor: default;
+}
+/* Akhir */
+
+/* Sidebar Kiri */
+.slider {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  background: #f9f9fc;
+  transition: 0.3s;
+  z-index: 9;
+}
+
+.slider-head {
+  padding: 24px 0 14px 0;
+}
+
+.slider-head span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #5e81f4;
+}
+.slider-head .btn1 {
+  font-size: 13px;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 28px;
+  background: #5e81f4;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.slider-head .btn1:hover {
+  background: rgba(94, 129, 244, 0.5);
+}
+
+.slider-body {
+  height: 100%;
+  font-size: 14px;
+}
+
+.slider-body .nav-link {
+  font-size: 15px;
+  color: #bbbec5;
+  transition: all 0.3s;
+  margin: 0 0 0 30px;
+  padding: 8px 16px;
+  display: flex;
+}
+.slider-body .nav-link.highlight.active {
+  color: #000;
+  border-right: 3px solid #5e81f4;
+}
+.slider-body .nav-link.highlight.active i {
+  color: #5e81f4;
+}
+
+.slider-body .nav-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sc-left {
+  padding: 8px 16px;
+  margin: 10px 0 0 30px;
+  width: 150px;
+}
+.sc-left img {
+  background-color: #5e81f4;
+  padding: 10px;
+}
+.sc-left .btn2 {
+  font-size: 13px;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 28px;
+  background: #5e81f4;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Akhir Sidebar Kiri */
+
+/* Sidebar Kanan */
+.slider-right {
+  color: #1e3953;
+  right: 0;
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  background: #f8f8fc;
+  transition: 0.3s;
+  z-index: 9;
+}
+
+.slider-head-right {
+  padding: 20px 0 10px 0;
+}
+.slider-head-right a.profil {
+  color: #1e3953;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.slider-body-right {
+  height: 100%;
+  font-size: 14px;
+}
+.slider-body-right h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.slider-body-right h6 {
+  font-size: 15px;
+}
+/* Akhir Sidebar Kanan */
+
+.slider-background {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+  z-index: 8;
+}
+
+@media (max-width: 992px) {
+  .slider {
+    margin-left: -280px;
+  }
+  .slider-right {
+    margin-right: -310px;
+  }
+
+  .slider.active {
+    margin-left: 0;
+  }
+
+  .slider-background.active {
+    display: block;
+  }
+
+  .nav-link.fixed-bottom {
+    display: none;
+  }
+
+  .main-pages {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

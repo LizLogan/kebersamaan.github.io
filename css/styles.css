@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: #efeff8;
+}
+
+div.footer-bottom {
+  position: absolute;
+  margin-left: 240px;
+  margin-right: 290px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+/* Main Page */
+.main-pages {
+  position: relative;
+  margin-left: 240px;
+  margin-right: 290px;
+  padding: 8px 8px;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+/* Friends */
+.nav-pills .nav-link {
+  background: 0 0;
+  border: 0;
+  border-radius: 0;
+  display: block;
+  color: #5f6368;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.nav-pills .nav-link:hover {
+  border-bottom: 3px solid rgba(30, 57, 83, 0.3);
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #000;
+  background-color: transparent !important;
+  border-bottom: 3px solid #1e3953;
+}
+
+.d-friend {
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+/* Akhir Friends */
+
+/* Courses */
+.course1 {
+  background: url('../img/course1.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 15px;
+  padding: 35px;
+  color: white;
+}
+.course2 {
+  background: url('../img/course2.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 15px;
+  padding: 35px;
+  color: white;
+}
+.course3 {
+  background: url('../img/course3.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 15px;
+  padding: 35px;
+  color: white;
+}
+.crs-content img {
+  border: 3px solid #fff;
+}
+.crs-content i {
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s;
+}
+.crs-content i:hover {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+/* Akhir Courses */
+
+/* Chats */
+.chats {
+  margin: 10px auto;
+}
+.chats img:hover {
+  cursor: pointer;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.setting-tray {
+  background: #eee;
+}
+
+.input {
+  border: none;
+  border-radius: 20px;
+  width: 80%;
+  outline: none;
+}
+.input::placeholder {
+  color: #6c757d;
+}
+
+.friend-drawer {
+  padding: 10px 20px;
+  display: flex;
+  background: #fff;
+  transition: 0.3 ease;
+}
+.friend-drawer .text {
+  margin-left: 12px;
+  width: 70%;
+}
+.friend-drawer .text h6 {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.friend-drawer .text p {
+  margin: 0;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  margin: 10px 30px;
+  background: #fff;
+  border-radius: 9px;
+  position: relative;
+  animation: fadeIn 1s ease-in;
+}
+.chat-bubble-blue {
+  padding: 10px 14px;
+  margin: 10px 30px;
+  background: #5e81f4;
+  color: #fff;
+  border-radius: 9px;
+  position: relative;
+  animation: fadeIn 1s ease-in;
+}
+
+.chat-box-tray {
+  background: #eaeae9;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #6c757d;
+  margin-top: 20px;
+}
+.chat-box-tray input {
+  margin: 0 10px;
+  padding: 6px 2px;
+}
+.chat-box-tray i {
+  cursor: pointer;
+  font-size: 22px;
+}
+/* Akhir Chats */
+
+/* Settings */
+.nav-set .nav-link {
+  background: 0 0;
+  border: 0;
+  border-radius: 0;
+  display: block;
+  color: #5f6368;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.nav-set .nav-link:hover {
+  color: #5f636888;
+  border-bottom: none;
+}
+.nav-set .nav-link.active,
+.nav-set .show > .nav-link {
+  color: #5e81f4;
+  background-color: transparent !important;
+  border-bottom: none;
+}
+
+.setting-acc {
+  font-size: 15px;
+  color: #575757;
+}
+
+.social-acc {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #575757;
+}
+/* Akhir Settings */
+
+/* Profile */
+
+/* Akhir Profile */
+/* Akhir Main Page */
+
+/* Sidebar Kiri */
+.slider {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  background: #f9f9fc;
+  transition: 0.3s;
+  z-index: 9;
+}
+
+.slider-head {
+  padding: 24px 0 14px 0;
+}
+
+.slider-head span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #5e81f4;
+}
+.slider-head .btn1 {
+  font-size: 13px;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 28px;
+  background: #5e81f4;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.slider-head .btn1:hover {
+  background: rgba(94, 129, 244, 0.5);
+}
+
+.slider-body {
+  height: 100%;
+  font-size: 14px;
+}
+
+.slider-body .nav-link {
+  font-size: 15px;
+  color: #bbbec5;
+  transition: all 0.3s;
+  margin: 0 0 0 30px;
+  padding: 8px 16px;
+  display: flex;
+}
+.slider-body .nav-link.highlight.active {
+  color: #000;
+  border-right: 3px solid #5e81f4;
+}
+.slider-body .nav-link.highlight.active i {
+  color: #5e81f4;
+}
+
+.slider-body .nav-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+/* Akhir Sidebar Kiri */
+
+/* Sidebar Kanan */
+.slider-right {
+  color: #1e3953;
+  right: 0;
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  background: #f8f8fc;
+  transition: 0.3s;
+  z-index: 9;
+}
+
+.slider-head-right {
+  padding: 20px 0 10px 0;
+}
+.slider-head-right a.profil {
+  color: #1e3953;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.slider-body-right {
+  height: 100%;
+  font-size: 14px;
+}
+.slider-body-right h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.slider-body-right h6 {
+  font-size: 15px;
+}
+/* Akhir Sidebar Kanan */
+
+.slider-background {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+  z-index: 8;
+}
+
+@media (max-width: 992px) {
+  .slider {
+    margin-left: -280px;
+  }
+  .slider-right {
+    margin-right: -310px;
+  }
+
+  .slider.active {
+    margin-left: 0;
+  }
+
+  .slider-background.active {
+    display: block;
+  }
+
+  .main-pages {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
